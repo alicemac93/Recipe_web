@@ -1,0 +1,203 @@
+/*
+#B0A89C darkest beige - this one for lines? 
+#C38AAC beige
+#EDECE8 light beige - use this one! 
+*/
+
+/* media queries */
+@media only screen and (max-width: 1680px) {
+  .recipes {
+    max-width: 1280px;
+    grid-gap: 60px 40px;
+    grid-template: repeat(2, 320px) / repeat(4, 1fr); 
+  }
+  .bottom{
+    flex-direction: row;
+    
+  }
+  .togglebar {
+    display:none;
+  }
+
+}
+
+@media only screen and (max-width: 1080px) {
+  .recipes {
+    background-color: red;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 20px;
+  }
+  .feature-container {
+    display: none;
+  }
+  } 
+
+@media only screen and (max-width: 720px) {
+  .recipes {
+    background-color: green;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  .bottom {
+    flex-direction: column;
+  } 
+  h2 {
+    display: none;
+  }
+  h1 {
+    font-size: 10px;
+  }
+  .togglebar {
+    display: inline;
+  }
+  li a {
+    display: none;
+  }
+   
+}
+
+body {
+  font-family: "roboto";
+  margin: 0;
+}
+
+h1 {
+  font-family: "Amatic SC";
+    font-size: 6vw;
+    margin: auto;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h3 {
+  text-decoration: none;
+}
+
+/* header */
+
+header {
+text-align: center;
+background-color: #B0A89C;
+}
+
+.top{
+  padding: 3% 0;
+  color: white;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  background-color: #EDECE8;
+  padding: 1% 0;
+
+}
+
+
+.menu {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+
+li a {
+  padding: 0 5%;
+}
+
+.box {
+padding: 5px;
+}
+
+
+/* main part */
+
+.recipes {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 40px 0;
+  display: grid;
+  grid-auto-rows: 300px;
+  grid-auto-flow: row;
+
+}
+
+/* styling for recipe */
+
+.recipe {
+border: solid #EDECE8 1px;
+width: 100%;
+}
+
+.recipe-img {
+  height: 230px;
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: contain;
+  position: absolute;
+  display: block;
+  bottom: 3%;   /* moving the img within the container - but how do i apply it to all? it is combined with absolute and relative */ 
+}
+
+.feature-container {
+  display: flex;
+  grid-column: 1/5;
+  grid-row: 3 / 4;
+  background-color: #EDECE8;
+  justify-content: space-evenly;
+
+  clear: both;  /* really */
+}
+
+.feature-container h3{
+  color: black;
+  font-size: 2em;
+}
+
+.feature-cotent {
+  text-align: center;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 1% 6%;
+}
+
+.appImg {
+  background-color: cornflowerblue;
+  height: 100%;
+  width: 50%;
+}
+
+.appButton {
+  padding: 12px 28px;
+  border: none;
+  background-color: #B0A89C;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin: auto 2%;
+  
+}
+
+.appButton i {
+  padding-top: 1%;
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+  color: white;
+  
+}
+
+.appButton:hover {
+  background-color: white;
+}
+
+.appbutton:hover i {
+  color: black;
+}
